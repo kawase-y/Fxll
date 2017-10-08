@@ -1,0 +1,32 @@
+<ons-page>
+    <div ng-controller="guideCtrl as guide">
+    	<ons-toolbar>
+			<div class="left" ng-click="guide.dialog()">
+				<ons-toolbar-button>
+					<ons-icon icon="fa-arrow-circle-left" fixed-width="true" style="font-size: 26px; vertical-align: -4px"> あなたの今の気分は？</ons-icon>
+				</ons-toolbar-button>
+			</div>
+         </ons-toolbar>
+	</div>
+     
+    
+    <div class="choice" ng-controller="ChoiceCtrl as Choice">
+        <br>
+        <img src="img/calm.png"  align="left" id="0" ng-click="Choice.info($event)">
+        <img src="img/angry.png" align="right" id="1" ng-click="Choice.info($event)">
+        <br clear="left">
+        <div style="text-align:center">
+         <img src="img/sulk.png" id="2" ng-click="Choice.info($event)">
+        </div>
+        <img src="img/smile.png" align="left" id="3" ng-click="Choice.info($event)">
+        <img src="img/sad.png"   align="right" id="4" ng-click="Choice.info($event)">
+    
+    
+        <div style="text-align:center">
+        <br><br><br><br><br>
+            <h2>天気を利用</h2>
+            <ons-switch id="weatherSwitch" var="mySwitch" checked></ons-switch>
+        </div>
+    </div>
+    
+</ons-page>

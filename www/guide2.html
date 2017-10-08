@@ -1,0 +1,33 @@
+<ons-page>
+    <div ng-controller="guideCtrl as guide">
+		<ons-toolbar>
+			<div class="left" ng-click="guide.backTop()">
+				<ons-toolbar-button>
+					<ons-icon icon="fa-arrow-circle-left" fixed-width="false" style="font-size: 26px; vertical-align: -4px"></ons-icon>
+				</ons-toolbar-button>
+			</div>
+			<div class="center" >
+				Quiz App
+			</div>
+			<div class="right">
+				{{guide.items.currentNum + 1}} / {{guide.items.totalNum}}問目
+			</div>
+		</ons-toolbar>
+		<div class="question">
+			<p>
+				{{guide.items.currentQ.text}}
+			</p>
+		</div>
+		<div class="choices">
+			<ons-row>
+                <ons-col width="50%" align="center" ng-repeat="choice in guide.items.currentQ.choices track by $index">
+                    <div class="choice">
+                        <button class="button button--large--cta" ng-click="guide.getAnswer($index)">
+        		  			{{choice}}
+        		  		</button>
+                    </div>
+    		  	</ons-col>
+			</ons-row>
+		</div>
+	</div>
+</ons-page>

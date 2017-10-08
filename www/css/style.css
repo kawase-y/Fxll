@@ -1,0 +1,77 @@
+/***************
+*トップページ
+****************/
+.title{
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 180px;
+    color: #FF9D0F;
+}
+.title h1 span{
+    font-size: 3rem;
+}
+.title p{
+    display: inline;
+    font-size: 1rem;
+    padding: 2px 10px;
+    background-color: #666;
+    color: #FFF;
+    border-radius: 20px;
+}
+.start-btn,.back-btn{
+    padding: 0 20px;
+    font-size: 30px;
+}
+
+/***************
+*選択ページ
+****************/
+.choice {
+    img { width: 100%; }
+}
+
+
+/***************
+*クイズページ
+****************/
+.right{
+    line-height: 40px;
+}
+.question{
+    padding: 10px 20px;
+    min-height: 240px;
+    background-color: #EEE;
+}
+.question p{
+    font-size: 24px;
+}
+.choices{
+    
+}
+.choices .choice{
+    width: 90%;
+    margin: 40px auto 0 auto;
+}
+
+/***************
+*結果ページ
+****************/
+.result{
+    min-height: 370px;
+}
+.result-title{
+    text-align: center;
+}
+.detail{
+    text-align: center;
+    font-size: 18px;
+}
+.score{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+.score span{
+    color: #FC3;
+    font-size: 60px;
+}

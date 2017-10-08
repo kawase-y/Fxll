@@ -1,0 +1,76 @@
+  <ons-page id="browse-page">
+    <div ng-controller="guideCtrl as guide">
+        <ons-toolbar>
+			<div class="left" ng-click="guide.backTop()">
+				<ons-toolbar-button>
+					<ons-icon icon="fa-arrow-circle-left" fixed-width="true" style="font-size: 26px; vertical-align: -4px"> おすすめはこちら！</ons-icon>
+				</ons-toolbar-button>
+			</div>
+        </ons-toolbar>
+	
+
+    <div class="content" style="text-align: center" >
+      <div class="recomended">
+        <h4>Recomended Playlists</h4>
+        <ons-carousel auto-refresh swipeable overscrollable auto-scroll item-width="80%" class="recomended_list"　>
+          <ons-carousel-item modifier="nodivider" id="1" class="recomended_playlist" ng-click="" style="background-color:blue;" ng-repeat="choice in guide.items.currentQ.choices track by $index">
+            <div class="thumbnail"><ons-icon icon="fa-arrow-circle-left"></ons-icon></div>
+            <div class="recomended_playlist_title" id="playlist_1_name">    {{choice}}</div>
+          </ons-carousel-item>
+          <ons-carousel-item modifier="nodivider" id="2" class="recomended_playlist" ng-click="guide.setAnswer($event)" style="background-color:red;">
+            <div class="thumbnail" ><img src="{{guide.items.currentQ.answer}}" align="right" id="angry" ng-click=""></div>
+            <div class="recomended_playlist_title" id="playlist_2_name">Playlist 2</div>
+          </ons-carousel-item>
+        　<ons-carousel-item modifier="nodivider" id="playlist_3" class="recomended_playlist"  style="background-color:green;">
+            <div class="thumbnail" ><ons-icon icon="ion-music-note" ></ons-icon></div>
+            <div class="recomended_playlist_title" id="playlist_3_name">Playlist 3</div>
+          </ons-carousel-item>
+        </ons-carousel>
+      </div>
+    </div>  
+      
+
+    <style type="text/css">
+
+      .recomended_playlist {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+
+      .recomended_playlist_title {
+        font-size: 200%;
+        font-weight: bold;
+        color: white;
+      }
+
+      .thumbnail {
+        width: 80%;
+        height: 60%;
+        display: table;
+        background-color: rgba(0, 0, 0, 0.42);
+        margin: 0 auto;
+      }
+
+      .thumbnail ons-icon {
+        font-size: 300%;
+        color: rgba(190, 190, 190, 0.74);
+        display: table-cell;
+        vertical-align: middle !important;
+      }
+
+      .recomended_list {
+        height: 350px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .recomended {
+        background: linear-gradient(#FBF5EF,#FACC2E);
+        padding-top: 60px;
+      }
+
+    </style>
+    </div>
+  </ons-page>
+
+

@@ -1,0 +1,57 @@
+  <ons-page id="browse-page">
+    <div ng-controller="guideCtrl as guide">
+        <ons-toolbar>
+    		<div class="left" ng-click="guide.backTop()">
+				<ons-toolbar-button>
+					<ons-icon icon="fa-arrow-circle-left" fixed-width="true" style="font-size: 26px; vertical-align: -4px"> おすすめはこちら！</ons-icon>
+				</ons-toolbar-button>
+			</div>
+        </ons-toolbar>
+	
+
+    <div class="content" style="text-align: center" >
+      <div class="recomended">
+        <h4>{{guide.weatherWeather}}<br>{{guide.items.mood}}あなたに！</h4>
+        <ons-carousel auto-refresh swipeable overscrollable auto-scroll item-width="100%" class="recomended_list"　>
+          <ons-carousel-item modifier="nodivider" id="{{guide.items.currentNum}}"
+            class="recomended_playlist" ng-click="guide.setAnswer(spot)"  ng-repeat="spot in guide.items.currentQ.choices track by $index">
+            <div class="thumbnail">
+                <img src="https://mb.api.cloud.nifty.com/2013-09-01/applications/tfTOuSitvbl4f2aN/publicFiles/{{spot}}.jpg" style="width: 100%"　id="spot" ng-click="Choice.info($event)"></div>
+            <div class="recomended_playlist_title" id="playlist_1_name">    {{spot}}</div>
+          </ons-carousel-item>
+        </ons-carousel>
+      </div>
+    </div>  
+      
+
+    <style type="text/css">
+  
+      .recomended_playlist_title {
+        font-size: 200%;
+        font-weight: bold;
+        color: black;
+      }
+
+      .thumbnail {
+        width: 90%;
+        display: table;
+        background-color: rgba(0, 0, 0, 0.42);
+        margin: 0 auto;
+      }
+
+      .recomended_list {
+        height: 350px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .recomended {
+        background: linear-gradient(#FBF5EF,#FACC2E);
+        padding-top: 30px;
+      }
+
+    </style>
+    </div>
+  </ons-page>
+
+
